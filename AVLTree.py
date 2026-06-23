@@ -408,3 +408,4 @@ class AVLTree(object):
             stack.append((node.right, height + 1))
 
         return max_height
+
