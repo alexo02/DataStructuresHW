@@ -26,7 +26,7 @@ for exp in experiments:
     plt.ylabel("זמן ריצה (מילישניות)", fontsize=12)
     plt.grid(True, linestyle='--', alpha=0.6)
     
-    #plt.show()
+    plt.show()
 
     plt.savefig(f"{exp['label']} (שאלה 3).pdf")
         

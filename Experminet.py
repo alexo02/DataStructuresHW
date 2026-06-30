@@ -47,13 +47,13 @@ class Ex:
         result3 = []
         result4 = []
 
-        for i in range(1,6):
+        for i in range(1,8):
             result1.append(self.run_ex(False, False, i, 4))
 
-        for i in i_array:
-            result2.append(self.run_ex(True, False, i, 4))
-            result3.append(self.run_ex(False, True, i, number_of_iter))
-            result4.append(self.run_ex(True, True, i, number_of_iter))
+        # for i in i_array:
+        #     result2.append(self.run_ex(True, False, i, 4))
+        #     result3.append(self.run_ex(False, True, i, number_of_iter))
+        #     result4.append(self.run_ex(True, True, i, number_of_iter))
 
         return(
         result1,
@@ -70,12 +70,12 @@ if __name__ == "__main__":
     ex1, ex2, ex3, ex4 = my_experiment.run_all(i_array, 20)
     df = pd.DataFrame(ex1[0:], columns= ["size", "tree_height", "num_of_rotations", "num_of_height_change", "amount_of_search_time" , "run_time"    ] )
     df.to_excel("experiment_results1.xlsx", index=False)
-    df = pd.DataFrame(ex2[0:], columns=["size", "tree_height", "num_of_rotations", "num_of_height_change",
-                                        "amount_of_search_time", "run_time"])
-    df.to_excel("experiment_results2.xlsx", index=False)
-    df = pd.DataFrame(ex3[0:], columns=["size", "tree_height", "num_of_rotations", "num_of_height_change",
-                                        "amount_of_search_time", "run_time"])
-    df.to_excel("experiment_results3.xlsx", index=False)
-    df = pd.DataFrame(ex4[0:], columns=["size", "tree_height", "num_of_rotations", "num_of_height_change",
-                                        "amount_of_search_time", "run_time"])
-    df.to_excel("experiment_results4.xlsx", index=False)
+    # df = pd.DataFrame(ex2[0:], columns=["size", "tree_height", "num_of_rotations", "num_of_height_change",
+    #                                     "amount_of_search_time", "run_time"])
+    # df.to_excel("experiment_results2.xlsx", index=False)
+    # df = pd.DataFrame(ex3[0:], columns=["size", "tree_height", "num_of_rotations", "num_of_height_change",
+    #                                     "amount_of_search_time", "run_time"])
+    # df.to_excel("experiment_results3.xlsx", index=False)
+    # df = pd.DataFrame(ex4[0:], columns=["size", "tree_height", "num_of_rotations", "num_of_height_change",
+    #                                     "amount_of_search_time", "run_time"])
+    # df.to_excel("experiment_results4.xlsx", index=False)
