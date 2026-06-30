@@ -48,10 +48,10 @@ class Ex:
         result4 = []
 
         for i in range(1,6):
-            result1.append(self.run_ex(False, False, i, 1))
+            result1.append(self.run_ex(False, False, i, 4))
 
         for i in i_array:
-            result2.append(self.run_ex(True, False, i, 1))
+            result2.append(self.run_ex(True, False, i, 4))
             result3.append(self.run_ex(False, True, i, number_of_iter))
             result4.append(self.run_ex(True, True, i, number_of_iter))
 
